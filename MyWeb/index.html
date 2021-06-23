@@ -1,0 +1,29 @@
+---
+---
+
+<!doctype html>
+<html>
+<header>
+    <link rel="stylesheet" href="css/styles.css">
+</header>
+
+<body>
+    <section class="Head-section">
+        <h1>머릿말</h1>
+    </section>
+
+    <section class="Body-section">
+        <h1>본문</h1>
+        {% assign image_files = site.static_files | where: "image", true %}
+        {% for myimage in image_files %}
+            <img src={{myimage.path}}>
+        {%endfor%}
+    </section>
+
+    <section class="Footer-section">
+        <h1>끝말</h1>
+    </section>
+</body>
+
+
+</html>
