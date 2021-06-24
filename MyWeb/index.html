@@ -1,7 +1,6 @@
 ---
 ---
 
-<!doctype html>
 <html>
 <header>
     <link rel="stylesheet" href="css/styles.css">
@@ -9,19 +8,23 @@
 
 <body>
     <section class="Head-section">
-        <h1>머릿말</h1>
+        <div class="TopNavigationBar">
+            <a {% if page.url == "/" %}class="active"{% endif %} href="/">
+                Home
+            </a>
+            <a {% if page.url == "/#About" %}class="active"{% endif %} href="/#About">
+                About
+            </a>
+            <a {% if page.url == "/#Content" %}class="active"{% endif %} href="/#Content">
+                Content
+            </a>
+        </div>
     </section>
 
     <section class="Body-section">
-        <h1>본문</h1>
-        {% assign image_files = site.static_files | where: "image", true %}
-        {% for myimage in image_files %}
-            <img src={{myimage.path}}>
-        {%endfor%}
     </section>
 
     <section class="Footer-section">
-        <h1>끝말</h1>
     </section>
 </body>
 
