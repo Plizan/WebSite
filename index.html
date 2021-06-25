@@ -1,3 +1,6 @@
+---
+---
+
 <html>
 <header>
     <link rel="stylesheet" href="css/styles.css">
@@ -6,13 +9,13 @@
 <body>
     <section class="Head-section">
         <div class="TopNavigationBar">
-            <a class="active" href="/">
+            <a {% if page.url == "/" %}class="active"{% endif %} href="/">
                 Home
             </a>
-            <a  href="/#About">
+            <a {% if page.url == "/#About" %}class="active"{% endif %} href="/#About">
                 About
             </a>
-            <a  href="/#Content">
+            <a {% if page.url == "/#Content" %}class="active"{% endif %} href="/#Content">
                 Content
             </a>
         </div>
